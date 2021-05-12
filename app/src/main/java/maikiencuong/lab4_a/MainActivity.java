@@ -19,11 +19,6 @@ public class MainActivity extends AppCompatActivity implements SendData {
         setContentView(R.layout.activity_main);
         tvThanhTien = findViewById(R.id.tvThanhTien);
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            Window w = getWindow();
-            w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-        }
-
         getSupportFragmentManager().beginTransaction()
                 .add(R.id.fragment_below, BelowFragment.newInstance("141.800 d")).commit();
     }
